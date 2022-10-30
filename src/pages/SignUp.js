@@ -8,16 +8,15 @@ import {
     SIGN_IN_FORM_INPUTS_ARRAY,
 } from "../utils/constants";
 
-const Login = () => {
-    const {isLoading, signInCall} = useAuthentication();
+const SignUp = () => {
+    const {isLoading, signUpCall} = useAuthentication();
 
     const onSubmit = async data =>
-        await signInCall({email: data?.email, password: data?.password});
-
+        await signUpCall({email: data?.email, password: data?.password});
     return (
         <div className="w-full h-[100vh] flex justify-center items-center flex-col">
             <p className="text-6xl font-extrabold tracking-widest uppercase mb-16 text-center">
-                user Login
+                Create Account
             </p>
             <LoginForm
                 inputs={SIGN_IN_FORM_INPUTS_ARRAY}
@@ -26,12 +25,12 @@ const Login = () => {
                 isLoading={isLoading}
             />
             <Link
-                to={ROUTES.SIGN_UP}
+                to={ROUTES.LOGIN}
                 className="text-blue-600 text-xl tracking-widest mt-8 cursor-pointer">
-                Create Account
+                Already have an account?
             </Link>
         </div>
     );
 };
 
-export default Login;
+export default SignUp;

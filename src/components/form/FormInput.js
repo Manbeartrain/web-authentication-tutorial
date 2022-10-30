@@ -5,7 +5,7 @@ const FormInput = ({input, control, rules}) => {
     const renderInput = ({field: {onChange, value}, fieldState: {error}}) => (
         <div className="mb-4">
             <input
-                className="w-[30vw] text-black border-2 border-gray-300 font-light px-4 py-3 rounded-md"
+                className="w-[80vw] text-black border-2 border-gray-300 font-light px-4 py-3 rounded-md"
                 type={input?.name === "Password" ? "password" : "text"}
                 onChange={onChange}
                 value={value}

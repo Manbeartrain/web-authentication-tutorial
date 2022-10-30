@@ -1,9 +1,10 @@
 import React from "react";
+import Navigation from "./navigation/Navigation";
 
 function App() {
     return (
-        <div className="w-full h-[100vh] flex justify-center items-center">
-            React Authentication tutorial
+        <div>
+            <Navigation />
         </div>
     );
 }
